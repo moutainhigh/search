@@ -1,0 +1,11 @@
+spring:
+  data:
+    elasticsearch:
+      client:
+        reactive:
+          connection-timeout: 10000
+          endpoints: 127.0.0.1:9200
+server:
+  port: 8889
+  servlet:
+    context-path: /search

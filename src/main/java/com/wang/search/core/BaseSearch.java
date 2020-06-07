@@ -9,4 +9,5 @@ package com.wang.search.core;
  * @since JDK 1.8
  */
 public interface BaseSearch {
+
 }
