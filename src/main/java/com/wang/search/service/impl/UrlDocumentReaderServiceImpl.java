@@ -1,10 +1,10 @@
 package com.wang.search.service.impl;
 
+import com.wang.search.component.DocumentReaderStrategy;
 import com.wang.search.core.DocumentEntity;
 import com.wang.search.service.DocumentReaderService;
 import org.springframework.stereotype.Service;
 
-import java.io.InputStream;
 
 /**
  * 网络文件读取实现类
@@ -18,22 +18,7 @@ import java.io.InputStream;
 public class UrlDocumentReaderServiceImpl implements DocumentReaderService {
 
     @Override
-    public DocumentEntity docReader(InputStream inputStream) {
-        return null;
-    }
-
-    @Override
-    public DocumentEntity pdfReader(InputStream inputStream) {
-        return null;
-    }
-
-    @Override
-    public DocumentEntity txtReader(InputStream inputStream) {
-        return null;
-    }
-
-    @Override
-    public DocumentEntity excelReader(InputStream inputStream) {
+    public DocumentEntity readDocument(DocumentReaderStrategy documentReaderStrategy) {
         return null;
     }
 }
