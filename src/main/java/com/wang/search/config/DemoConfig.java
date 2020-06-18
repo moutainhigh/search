@@ -24,6 +24,8 @@ import javax.annotation.Resource;
 public class DemoConfig {
     @Resource
     private ZookeeperRegistryCenter zookeeperRegistryCenter;
+    @Resource
+    private ZookeeperConfig zookeeperConfig;
 
     private static final String cron = "0/2 * * * * ? ";
 
@@ -32,7 +34,8 @@ public class DemoConfig {
         LiteJobConfiguration configuration = LiteJobConfiguration.newBuilder(
                 new SimpleJobConfiguration(
                         JobCoreConfiguration.newBuilder(
-                                "jobName", cron, 1).build(),
+                                "first", zookeeperConfig.getJob().get("first"),
+                                zookeeperConfig.getTime().get("first")).build(),
                         MyJob.class.getCanonicalName())).overwrite(true).build();
 
         return new SpringJobScheduler(myJob, zookeeperRegistryCenter, configuration);
