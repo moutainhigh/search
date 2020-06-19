@@ -3,6 +3,9 @@ server:
   servlet:
     context-path: /search
 spring:
-  elasticsearch:
-    rest:
-      uris: 127.0.0.1:9002
+  data:
+    elasticsearch:
+      client:
+        reactive:
+          connection-timeout: 10000
+          endpoints: 127.0.0.1:9200
