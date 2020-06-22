@@ -20,3 +20,9 @@ elasticjob:
   time:
     first: 1
     second: 2
+  data:
+    elasticsearch:
+      client:
+        reactive:
+          connection-timeout: 10000
+          endpoints: 127.0.0.1:9200
