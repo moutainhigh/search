@@ -12,7 +12,7 @@ import lombok.Data;
  * @since JDK 1.8
  */
 @Data
-public class CommonRunTimeException extends RuntimeException {
+public class BusinessException extends RuntimeException {
     /**
      * 异常错误码
      */
@@ -22,7 +22,7 @@ public class CommonRunTimeException extends RuntimeException {
      */
     private String description;
 
-    public CommonRunTimeException(ReturnCode returnCode) {
+    public BusinessException(ReturnCode returnCode) {
         super(returnCode.getDescription());
         this.code = returnCode.getCode();
         this.description = returnCode.getDescription();
