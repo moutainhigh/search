@@ -6,7 +6,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.3.0.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
     <groupId>com.wang</groupId>
     <artifactId>search</artifactId>
@@ -59,21 +59,17 @@
             <artifactId>poi</artifactId>
             <version>3.16</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-scratchpad -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-scratchpad</artifactId>
             <version>3.16</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>3.16</version>
         </dependency>
 
-        <!-- 读取pdf的依赖包 -->
-        <!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
         <dependency>
             <groupId>org.apache.pdfbox</groupId>
             <artifactId>pdfbox</artifactId>
@@ -85,15 +81,12 @@
             <artifactId>itext</artifactId>
             <version>4.2.1</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.itextpdf/itext-asian -->
         <dependency>
             <groupId>com.itextpdf</groupId>
             <artifactId>itext-asian</artifactId>
             <version>5.2.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
-        <!-- 测试附件上传 -->
         <dependency>
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
@@ -103,6 +96,20 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.dangdang</groupId>-->
+<!--            <artifactId>elastic-job-lite-spring</artifactId>-->
+<!--            <version>2.1.5</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.dangdang</groupId>-->
+<!--            <artifactId>elasic-job-lite-core</artifactId>-->
+<!--            <version>2.1.5</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 
