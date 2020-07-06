@@ -10,7 +10,7 @@ import com.wang.search.constant.ReturnCode;
  * @date 2020/6/6 12:39
  * @since JDK 1.8
  */
-public class DocException extends CommonRunTimeException {
+public class DocException extends BusinessException {
     public DocException(ReturnCode returnCode) {
         super(returnCode);
     }

@@ -1,8 +1,7 @@
 package com.wang.search.controller;
 
 import com.wang.search.controller.entity.Response;
-import com.wang.search.exception.CommonRunTimeException;
-import com.wang.search.exception.DocException;
+import com.wang.search.exception.BusinessException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataAccessException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -28,9 +27,9 @@ public class BaseContruller {
             log.error("DATABASE_ERROR:{}", throwable.getStackTrace().toString());
             return new Response().setReturnCode(1002).setDescription("数据库错误").setData(null);
         }
-        if (throwable instanceof CommonRunTimeException) {
+        if (throwable instanceof BusinessException) {
             log.warn("BUSSINESS_ERROR:{}", throwable.getStackTrace().toString());
-            return new Response().setReturnCode(((CommonRunTimeException) throwable).getCode()).setDescription(((CommonRunTimeException) throwable).getDescription());
+            return new Response().setReturnCode(((BusinessException) throwable).getCode()).setDescription(((BusinessException) throwable).getDescription());
         }
         return new Response().setReturnCode(1001).setDescription("系统未知错误");
     }
