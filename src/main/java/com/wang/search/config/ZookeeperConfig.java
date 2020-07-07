@@ -3,7 +3,6 @@ package com.wang.search.config;
 import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperConfiguration;
 import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperRegistryCenter;
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -39,6 +38,7 @@ public class ZookeeperConfig {
     @Bean(initMethod = "init")
     public ZookeeperRegistryCenter zookeeperRegistryCenter() {
         ZookeeperConfiguration configuration = new ZookeeperConfiguration(serverList, namespace);
+        configuration.setConnectionTimeoutMilliseconds(10000);
         return new ZookeeperRegistryCenter(configuration);
     }
 }

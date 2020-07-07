@@ -13,7 +13,7 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
-public class Response {
+public class Response<T> {
     /**
      * 返回码
      */
@@ -22,4 +22,6 @@ public class Response {
      * 返回描述
      */
     private String description;
+
+    private T data;
 }
